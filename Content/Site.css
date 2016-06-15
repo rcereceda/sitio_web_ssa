@@ -1,0 +1,190 @@
+﻿body
+{    
+    background: #FFF;
+    color: #334;
+    font: normal 75% Sans-Serif, Verdana, Tahoma, Arial, "Helvetica Neue", Helvetica;
+    line-height: 1.5;    
+}
+
+p
+{
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header
+{
+    position: relative;
+    margin-bottom: 0px;
+    color: #000;
+    padding: 0;
+}
+
+#header h1
+{
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 0;    
+    border: none;
+    line-height: 2em;
+    font-size: 32px !important;
+}
+
+#main
+{
+    padding: 0px 15px 10px 15px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    _height: 1px; /* only IE6 applies CSS properties starting with an underscore */
+}
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 75px;
+}
+
+input[type="text"] 
+{
+    width: 200px;
+    border: 1px solid #CCC;
+}
+
+input[type="password"] 
+{
+    width: 200px;
+    border: 1px solid #CCC;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+/*.clear
+{
+    clear: both;
+}
+
+.error
+{
+    color:Red;
+}*/
+
+#menucontainer
+{
+    margin-top:40px;
+}
+
+div#title
+{
+    display:block;    
+    text-align:left;
+}
+
+#logindisplay
+{
+    font-size:1.1em;    
+    display:block;
+    text-align:right;
+    margin:10px;
+    color:White;
+}
+
+#logindisplay a:link
+{
+    color: #357;
+    text-decoration: underline;
+}
+
+#logindisplay a:visited
+{
+    color: Black;
+    text-decoration: underline;
+}
+
+#logindisplay a:hover
+{
+    color: Black;
+    text-decoration: none;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label,
+.editor-label
+{
+    margin: 1em 0 0 0;
+}
+
+.display-field,
+.editor-field
+{
+    margin:0.5em 0 0 0;
+}
+
+.text-box
+{
+    width: 30em;
+}
+
+.text-box.multi-line
+{
+    height: 6.5em;
+}
+
+.tri-state
+{
+    width: 6em;
+}

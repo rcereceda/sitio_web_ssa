@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode
+      url="~/"
+      title="Inicio"
+      description="">    
+
+    <siteMapNode
+        url="Home/Conozcanos"
+        title="Conózcanos"
+        description="" >      
+    </siteMapNode>
+
+    <siteMapNode
+        url="Home/Programas"
+        title="Programas de Salud"
+        description="" >
+      <siteMapNode
+        url="Home/Adolescente"
+        title="Adolescente"
+        description="" />
+      <siteMapNode
+        url="Home/Adulto"
+        title="Adulto Mayor"
+        description="" />
+      <siteMapNode
+        url="Home/CancerCervico"
+        title="Cáncer Cervico Uterino"
+        description="" />
+      <siteMapNode
+        url="Home/CancerMamas"
+        title="Cáncer de Mama"
+        description="" />
+      <siteMapNode
+        url="Home/Cardiovascular"
+        title="Cardiovascular"
+        description="" />
+      <siteMapNode
+        url="Home/Chagas"
+        title="Chagas"
+        description="" />
+      <siteMapNode
+        url="Home/ChileCrece"
+        title="Chile Crece Contigo"
+        description="" />
+      <siteMapNode
+        url="Home/Infantil"
+        title="Infantil"
+        description="" />
+      <siteMapNode
+        url="Home/IRA"
+        title="IRA-ERA"
+        description="" />      
+      <siteMapNode
+        url="Home/Mujer"
+        title="Mujer"
+        description="" />
+      <siteMapNode
+        url="Home/Nutricion"
+        title="Nutrición"
+        description="" />
+      <siteMapNode
+        url="Home/Odontologico"
+        title="Odontológico"
+        description="" />      
+      <siteMapNode
+        url="Home/PESPI"
+        title="PESPI"
+        description="" />
+      <siteMapNode
+        url="Home/SaludMental"
+        title="Salud Mental"
+        description="" />
+      <siteMapNode
+        url="Home/Tuberculosis"
+        title="TBC"
+        description="" />
+      <siteMapNode
+        url="Home/VIH"
+        title="VIH"
+        description="" />
+    </siteMapNode>
+
+    <siteMapNode
+        url="Home/Urgencia"
+        title="Emergencias"
+        description="" >
+      <siteMapNode
+        url="Home/SAPU"
+        title="SAPU"
+        description="" />
+      <siteMapNode
+        url="Home/SAMU"
+        title="SAMU"
+        description="" />      
+      <siteMapNode
+        url="Home/Emergencia"
+        title="Emergencias Hospitalarias"
+        description="" />
+      <siteMapNode
+        url="Home/COE"
+        title="COE"
+        description="" />
+    </siteMapNode>
+
+    <siteMapNode
+        url="Home/Inversiones"
+        title="Inversiones"
+        description="" >
+    </siteMapNode>
+
+    <siteMapNode
+        url="Home/ComunicacionesRRPP"
+        title="Comunicaciones y R.R.P.P"
+        description="" >
+      <siteMapNode
+        url="Home/Comunicaciones"
+        title="Comunicaciones"
+        description="" />      
+      <siteMapNode
+        url="Home/Participacion"
+        title="Participación Social"
+        description="" />
+      <siteMapNode
+        url="Home/OIRS"
+        title="OIRS"
+        description="" />
+    </siteMapNode>    
+
+  </siteMapNode>
+
+</siteMap>

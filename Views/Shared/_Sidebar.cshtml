@@ -1,0 +1,91 @@
+﻿<style type="text/css">
+
+#gallery {
+	position:relative;
+	height:195px;
+}
+#gallery a {
+	float:left;
+	position:absolute;
+}
+	
+#gallery a img {
+	border:none;
+}
+	
+#gallery a.show {
+	z-index:500
+}
+
+#gallery .caption {
+	z-index:600; 
+	background-color:#000; 
+	color:#ffffff; 
+	height:40px; 
+	width:100%; 
+	position:absolute;
+	bottom:0;
+}
+
+#gallery .caption .content {
+	margin:5px
+}
+	
+#gallery .caption .content h3 {
+	margin:0;
+	padding:0;
+	color:#1DCCEF;
+	font-size:12px;
+}	
+
+</style>
+
+<div id="gallery">
+
+	<a href="http://www.hospitalcopiapo.cl" class="show" target="_blank">
+		<img src="/Content/img/copiapo.jpg" width="260" height="195" title="" alt="" rel="<h3>Hospital Regional de Copiapó</h3>Los Carrera 1320, Copiapó, Chile. "/>
+	</a>
+	
+	<a href="http://www.hospitalprovincialdelhuasco.cl" class="show" target="_blank">
+		<img src="/Content/img/vallenar.jpg" width="260" height="195" title="" alt="" rel="<h3>Hospital Provincial del Huasco</h3>Avenida Huasco 392, Vallenar, Chile. "/>
+	</a>
+	
+	<a href="@Url.Action("HospitalHuasco", "Home")">
+		<img src="/Content/img/huasco.jpg" width="260" height="195" title="" alt="" rel="<h3>Hospital Manuel Magalhaes Medling</h3>Canteras 105, Huasco, Chile. "/>
+	</a>
+
+	<a href="@Url.Action("HospitalChanaral", "Home")">
+		<img src="/Content/img/chañaral.jpg" width="260" height="195" title="" alt="" rel="<h3>Hospital Dr. Jerónimo Méndez Arancibia</h3>Avenida Arturo Prat 1000,  Chañaral, Chile. "/>
+	</a>
+	
+	<a href="@Url.Action("HospitalDiego", "Home")">
+		<img src="/Content/img/diego.jpg" width="260" height="195" title="" alt="" rel="<h3>Hospital Florencio Vargas Díaz</h3>Juan Martínez 2200, Diego de Almagro, Chile. "/>
+	</a>	
+
+	<div class="caption"><div class="content"></div></div>
+</div>    
+
+@Html.Partial("_Banner")
+
+<div class="section network-section">
+
+<div class="section-title">SITIOS RELACIONADOS</div>
+
+    <div class="section-content">
+
+        <ul class="nice-list">
+	        <li><a href="http://www.minsal.cl" target="_blank">MINSAL</a></li>
+    		<li><a href="http://www.supersalud.cl" target="_blank">SUPERINTENDENCIA DE SALUD</a></li>
+	    	<li><a href="http://www.fonasa.cl" target="_blank">FONASA</a></li>
+            <li><a href="http://www.seremisaludatacama.cl" target="_blank">SEREMI DE SALUD ATACAMA</a></li>
+            <li><a href="http://www.ispch.cl/" target="_blank">ISP</a></li>		   	
+            <li><a href="http://www.conace.cl/" target="_blank">CONACE</a></li>
+            <li><a href="http://www.sernam.cl/" target="_blank">SERNAM</a></li>
+            <li><a href="http://www.sename.cl/" target="_blank">SENAME</a></li>
+            <li><a href="http://www.senadis.cl/" target="_blank">SENADIS</a></li>
+            <li><a href="http://www.onemi.cl/" target="_blank">ONEMI</a></li>        
+		</ul>
+						
+    </div>
+
+</div>

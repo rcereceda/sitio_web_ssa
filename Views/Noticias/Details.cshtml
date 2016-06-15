@@ -1,0 +1,31 @@
+﻿@model SitioWeb.Models.Noticia
+
+@{
+    ViewBag.Title = "Detalle";    
+}
+
+<h2>Detalle</h2>
+
+<fieldset>
+    <legend>Noticia</legend>
+
+    <div class="display-label">TITULO</div>
+    <div class="display-field">@Model.Titulo</div>
+
+    <div class="display-label">FECHA</div>
+    <div class="display-field">@Model.Fecha.ToLongDateString()</div>
+
+    <div class="display-label">IMAGEN</div>
+    <div class="display-field"><img src="@Model.Imagen" alt="" /></div>
+
+    <div class="display-label">TEXTO</div>
+    <div class="display-field">@Html.Raw(Model.Texto)</div>
+
+    <div class="display-label">CATEGORIA</div>
+    <div class="display-field">@Html.DisplayFor(model => Model.Categoria.Nombre)</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Volver", "Index")
+</p>
+

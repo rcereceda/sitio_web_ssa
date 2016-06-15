@@ -1,0 +1,134 @@
+@using SitioWeb.Helpers
+<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <title>@ViewBag.Title</title>
+    
+    <meta property="og:title" content="Servicio de Salud Atacama" />
+    <meta property="og:type" content="government" />
+    <meta property="og:url" content="http://www.saludatacama.cl" />
+    <meta property="og:image" content="http://www.saludatacama.cl/Content/img/logogob.jpg" />
+    <meta property="og:site_name" content="Servicio de Salud Atacama" />
+    <meta property="fb:admins" content="1223439790" />
+    <meta property="og:description" 
+          content="El Servicio de Salud Atacama es organismo estatal funcionalmente 
+                   descentralizado y dotado de personalidad jurídica y patrimonio 
+                   propio para el cumplimiento de sus fines." />    
+
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" /> 
+    <link href="@Url.Content("~/Content/Template.css")" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAYyZwyQ0FU60ErAyXYGnrJxQwzeK7USe7liUybhkhHvci2_ymwxT3u3pZ6H_bQnXNaKTSIbIg7vvq1Q"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.gmap-1.1.0-min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/slide.js")" type="text/javascript"></script>    
+        @(Html.Telerik().StyleSheetRegistrar()
+                      .DefaultGroup(group => group                          
+                          .Add("telerik.common.min.css")
+                          .Add("telerik.vista.min.css")                          
+                          .Combined(true)
+                          .Compress(true))
+                     )
+    <script type="text/javascript">
+        $(function(){
+            //Get our elements for faster access and set overlay width
+            div = $('div.sc_menu'),
+                 ul = $('ul.sc_menu'),
+            // unordered list's left margin
+                 ulPadding = 15;
+
+            //Get menu width
+            var divWidth = div.width();
+
+            //Remove scrollbars
+            div.css({ overflow: 'hidden' });
+
+            //Find last image container
+            var lastLi = ul.find('li:last-child');
+                        
+            //When user move mouse over menu
+            div.mousemove(function (e) {
+
+                //As images are loaded ul width increases,
+                //so we recalculate it each time
+                var ulWidth = lastLi[0].offsetLeft + lastLi.outerWidth() + ulPadding;
+
+                var left = (e.pageX - div.offset().left) * (ulWidth - divWidth) / divWidth;
+                div.scrollLeft(left);
+            });
+        });
+    </script>    
+</head>
+
+<body>
+
+    <div id="fb-root"></div>
+    <script>    
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    } (document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <div class="center-wrapper">    
+
+        <div id="network">
+	            @Html.Partial("_Network")
+        </div>
+
+        <div id="header">
+
+            <div id="title">
+                @Html.Partial("_Title")                
+            </div>
+
+            <!--<div id="logindisplay" class="right">
+                @Html.Partial("_LogOnPartial")
+            </div>-->
+
+            <div class="clearer">&nbsp;</div>
+
+            <div id="navigation">            
+                @MvcHtmlString.Create(Html.Menu())
+			</div>
+
+        </div>        
+
+        <div id="main-two-columns" class="main">
+            <div class="left" id="main-left">
+                @if (Request.RawUrl == "/")
+                {
+                    <a href="/Content/Cuenta_Publica_2011_SSA.pdf" target="_blank"><img alt="" 
+                        src="@Url.Content("~/Content/img/banners/cuenta_publica.jpg")" 
+                        class="medium left bordered" /></a>
+                }
+                @RenderBody()
+            </div>
+
+            <div class="right sidebar" id="sidebar">
+                @Html.Partial("_Sidebar")
+            </div>
+
+			<div class="clearer">&nbsp;</div>            
+
+        </div>
+
+        <div>
+            @Html.Partial("_Scroll")
+        </div>
+
+        <div id="dashboard">
+            @Html.Partial("_Dashboard")
+        </div>
+
+        <div id="footer">
+            @Html.Partial("_Footer")
+        </div>
+
+    </div>
+@(Html.Telerik().ScriptRegistrar().Globalization(true))
+</body>
+</html>

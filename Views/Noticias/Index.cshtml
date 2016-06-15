@@ -1,0 +1,58 @@
+﻿@model SitioWeb.Helpers.PaginatedList<SitioWeb.Models.Noticia>
+
+@{
+    ViewBag.Title = "Servicio de Salud Atacama";
+}
+
+<h2>Noticias</h2>
+
+<p>
+    @Html.ActionLink("Nueva Noticia", "Create")
+
+    @if (Request.IsAuthenticated) {
+        <div>
+            @Html.ActionLink("Salir", "LogOff", "Account")
+        </div>
+    }
+</p>
+
+<div class="post-meta archive-pagination">					
+    <div class="left">
+        @if (Model.HasPreviousPage)
+        {        
+            @Html.RouteLink("Anterior",
+                "Admin",
+                new { page = (Model.PageIndex - 1) })
+        }
+    </div>
+	<div class="right">
+        @if (Model.HasNextPage)
+        {        
+            @Html.RouteLink("Siguiente",
+                "Admin",
+                new { page = (Model.PageIndex + 1) })
+        }     
+    </div>
+    <div class="clearer">&nbsp;</div>					
+</div>
+
+@foreach (var item in Model)
+{
+    <div class="post">
+        <div class="archive-post-date">
+	        <div class="archive-post-day">@item.Fecha.Day</div>
+	        <div class="archive-post-month">@item.Fecha.ToString("MMMM").Substring(0, 3).ToUpper()</div>
+	    </div>
+	    <div class="archive-post-title">
+        	<h3>@Html.ActionLink(item.Titulo, "Leer", "Home", new { id = item.Slug }, null)</h3>
+	        <div class="post-date">@item.Fecha.ToLongDateString()</div>
+            <div>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Detalle", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Borrar", "Delete", new { id = item.Id })
+            </div>
+	    </div>
+        <div class="clearer">&nbsp;</div>
+    </div>
+    <div class="archive-separator"></div>
+}

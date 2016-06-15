@@ -1,0 +1,186 @@
+﻿@{
+    ViewBag.Title = "Conozcanos";
+}
+
+<script type="text/javascript">
+    $(function () {
+
+        $('a[href*=#]').click(function () {
+
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+         && location.hostname == this.hostname) {
+
+                var $target = $(this.hash);
+
+                $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+
+                if ($target.length) {
+
+                    var targetOffset = $target.offset().top;
+
+                    $('html,body').animate({ scrollTop: targetOffset }, 500);
+
+                    return false;
+
+                }
+
+            }
+
+        });
+
+    });
+</script>
+
+<div id="top">
+<h2>Conózcanos</h2>
+</div>
+
+<p>Somos un organismo estatal funcionalmente descentralizado y dotado de personalidad jurídica 
+y patrimonio propio para el cumplimiento de sus fines.</p>
+
+<h3>Nuestra Misión</h3>
+
+<p>"Contribuir a elevar el nivel de salud de la población de la Región de Atacama a través de la 
+articulación, coordinación e integración de la Red Asistencial, gestionando y brindado prestaciones 
+de salud de calidad y fomentando la participación ciudadana"</p>
+
+<h3>Organigrama</h3>
+
+<br />
+
+<script type='text/javascript'>
+    google.load('visualization', '1', { packages: ['orgchart'] });
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+        data.addRows(4);
+        data.setCell(0, 0, 'Cynthia Neumann', 'Dra. Cynthia Neumann<br/><a href="#directora"><font color="blue"><i>Directora<i></font></a>');
+        data.setCell(1, 0,
+      'Verónica Gómez', 'Sra. Verónica Gómez<br/><a href="#sda"><font color="blue"><i>Subdirectora Administrativa<i></font></a>');
+        data.setCell(1, 1, 'Cynthia Neumann');
+        data.setCell(2, 0, 'Christian Galleguillos', 'Dr. Christian Galleguillos<br/><a href="#sdm"><font color="blue"><i>Subdirector (S) Médico<i></font></a>');
+        data.setCell(2, 1, 'Cynthia Neumann');
+        data.setCell(3, 0, 'Héctor Guerra', 'Sr. Héctor Guerra<br/><a href="#sdr"><font color="blue"><i>Subdirector (S) R.R.H.H.<i></font></a>');
+        data.setCell(3, 1, 'Cynthia Neumann');
+
+        // Create and draw the visualization.
+        var orgchart = new google.visualization.OrgChart(document.getElementById('visualization'));
+        orgchart.draw(data, { allowHtml: true });
+    }
+</script>
+
+
+<div id='visualization'></div>
+
+<br />
+<br />
+
+<a href="http://webhosting.redsalud.gov.cl/transparencia/public/ssatacama/organica.html" target="_blank">Ver Organigrama Completo</a>
+
+<br />
+
+<div id="directora">
+<h3>Dra. Cynthia Neumann Molina</h3>
+
+<br />
+
+<img src="../../Content/img/paola.neumann.jpg" class="medium left bordered" alt="directora" />
+
+<p>La Dra. Cynthia Paola Neumann Molina, es médico cirujano, con especialidad en Otorrinolaringología 
+de la Universidad de Chile, realizada en el Hospital Clínico de la misma casa de estudios y cuya 
+carrera fue aprobada con máxima distinción.</p>
+
+<p>Ha realizado innumerables capacitaciones de su especialidad tanto en Chile con en el extranjero, 
+y ha participado en importantes congresos de Otorrinolaringología.</p>
+
+<p>Ha realizado más de 13 publicaciones relacionadas con esta materia conjuntamente con otros médicos 
+cirujanos. Neumann Molina ha realizado diversas presentaciones en Congresos nacionales e 
+internacionales sobre su especialidad.</p>
+
+<p>Actualmente es miembro activo de la Sociedad Chilena de Otorrinolaringología, medicina y cirugía 
+de cabeza y cuello.</p>
+
+<p>Se ha desempeñado como Médico Cirujano Otorrinolaringólogo en el Hospital de Vallenar; además 
+como médico legista en el Servicio Médico Legal de Copiapó; Médico Cirujano Otorrinolaringólogo en el 
+Centro Médico CEDIMED Ltda.; y antes de asumir como Directora del Servicio de Salud Atacama se 
+desempeñaba como Médico Cirujano Otorrinolaringólogo en el Hospital de Copiapó.</p>
+</div>
+
+<a href="#top">Volver</a>
+
+<div id="sda">
+<h3>Sra. Verónica Gómez Barrios</h3>
+
+<br />
+
+<img src="../../Content/img/veronica.gomez.jpg" class="medium left bordered" alt="sda" />
+
+<p>Cursó sus estudios superiores en la Universidad Católica del Norte de Antofagasta obteniendo el 
+título de Ingeniero Comercial y Licenciada en las Ciencias de la Administración de Empresas. Su vida 
+laboral ha estado vinculada al servicio público, iniciando su carrera profesional en la Secretaria 
+Regional Ministerial de Salud de Atacama, donde sus principales logros fueron: la construcción del 
+Hospital de Chañaral y la celebración del primer convenio de programación entre el Ministerio de 
+Salud y el Gobierno Regional de Atacama.</p>
+
+<p>El año 1996 ingresa al Servicio de Salud Atacama y el año 2000 ejerce la jefatura del departamento 
+de Recursos Físicos y Abastecimiento por un periodo de 7 años, centrando su gestión en la 
+materialización de proyectos de inversión en hospitales, consultorios y postas de salud respondiendo 
+a los modelos de salud. Se destaca la primera etapa del Hospital de Copiapó, la construcción del 
+Clínica Básica de Salud Caldera y la reposición del Hospital Provincial del Huasco.</p>
+
+<p>El año 2007 asume funciones en el Gobierno Regional de Atacama en la División de Análisis y 
+Control de Gestión, donde su labor se centra en realizar las gestiones necesarias con los servicios 
+públicos y privados para el desarrollo de la Región de acuerdo a las directrices que emanan tanto del 
+nivel regional como nacional, en concordancia con la Estrategia de Desarrollo Regional.</p>
+
+<p>Desde noviembre del 2011 ejerce el cargo de Subdirectora Administrativa en el Servicio de 
+Salud Atacama.</p>
+
+</div>
+
+<a href="#top">Volver</a>
+
+<div id="sdm">
+<h3>Dr. Christián Galleguillos Sáez</h3>
+
+<br />
+
+<img src="../../Content/img/christian.galleguillos.jpg" class="medium left bordered" alt="sdm" />
+
+<p>Médico Cirujano y Neurólogo Infantil, egresado de la Universidad de Chile con distinción máxima, 
+con larga experiencia en el área de la salud.</p>
+
+<p>Persona con capacidad de liderar y con claro conocimiento y práctica de administración por 
+objetivo y optimización del uso de los recursos tanto humanos como económicos y de infraestructura.</p>
+
+<p>Conoce ampliamente los procesos de la salud (clínicas y hospitales), de la Región de Atacama, 
+habiendo desempeñado cargos de médico asesor en el Departamento de Gestión de Redes Asistenciales 
+del Servicio Salud Atacama, cómo medico clínico en jornada completa en el Hospital Regional de Copiapó 
+y médico jefe en el Centro de Diagnóstico  y Terapéutico del Hospital Regional de Copiapó.</p>
+</div>
+
+<a href="#top">Volver</a>
+
+<div id="sdr">
+<h3>Sr. Héctor Guerra Olivares</h3>
+
+<br />
+
+<img src="../../Content/img/hector.guerra.jpg" class="medium left bordered" alt="sdm" />
+
+<p>Héctor Guerra Olivares, es Contador Publico Auditor, de la Universidad de Atacama y Contador 
+General del Instituto Comercial de Copiapó, ha realizado estudios de postgrado en el Área de Recursos 
+Humanos, entre los mas importantes está el "Diplomado en Desarrollo Gerencial para Directivos de los 
+Servicios de Salud" realizado en la Universidad Mayor y el  "Diplomado en Gestión de Instituciones de 
+Salud" realizado en la Universidad de Chile, además de otras capacitaciones como la asistencia a 
+cursos, talleres y seminarios. Antes de asumir como Subdirector de Recursos Humanos se desempeñaba 
+como Jefe del Subdepartamento de Remuneraciones y Profesional Asesor en Gestión de Recursos Humanos.</p>
+ 
+<p>Guerra Olivares, es un funcionario de carrera y de larga trayectoria, ingresó al Servicio el 01 de 
+septiembre de 1976 y se ha desempeñado en el Área de Recursos Humanos desde 1984.</p>
+</div>
+
+<a href="#top">Volver</a>

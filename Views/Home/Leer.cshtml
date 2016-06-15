@@ -1,0 +1,41 @@
+﻿@model SitioWeb.Models.Noticia
+@{
+    ViewBag.Title = Model.Titulo;
+}
+
+<div class="post">
+    <div class="post-title"><h2>@Model.Titulo</h2></div>
+	<div class="post-date">@Model.Fecha.ToLongDateString()</div>
+	<div class="post-body">
+        <div>
+            <p><img src="@Model.Imagen" alt="" class="left bordered" /></p>
+        </div>
+        <div >
+       	    <p>@Html.Raw(Model.Texto)</p>
+        </div>
+    </div>
+</div>
+
+<fb:like send="false" layout="box_count" width="80" show_faces="false"></fb:like>
+
+<a href="https://twitter.com/share" 
+    class="twitter-share-button" 
+    data-via="SSAtacama" 
+    data-lang="es"
+    data-count="vertical">Twittear</a>
+<script>
+    !function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+    }
+    (document, "script", "twitter-wjs");
+</script>
+
+<br /><br />
+
+<fb:comments href="@Request.Url.AbsoluteUri" num_posts="2" width="670"></fb:comments>

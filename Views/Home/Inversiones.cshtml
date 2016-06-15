@@ -1,0 +1,44 @@
+﻿@using SitioWeb.Helpers
+@model SitioWeb.Helpers.PaginatedList<SitioWeb.Models.Noticia>
+@{
+    ViewBag.Title = "Servicio de Salud Atacama";
+}
+
+@foreach (var item in Model.Select((x, i) => new { Data = x, Index = i }))
+{    
+    <div class="post">
+	    <div class="post-title"><h2>@Html.ActionLink(item.Data.Titulo, "Leer", "Home", new { id = item.Data.Slug }, null)</h2></div>
+	    <div class="post-date">@item.Data.Fecha.ToLongDateString()</div>
+	    <div class="post-body">
+            <div>
+                <p><img src="@item.Data.Imagen" alt="" class="medium left bordered" /></p>
+            </div>
+            <div>  
+                <p>
+           	        @Html.Raw(Html.GetFirstParagraph(item.Data.Texto))
+                </p>
+	        </div>
+	    </div>
+    </div>
+    <div class="content-separator"></div>    
+}
+
+<div class="archive-pagination">
+    <div class="left previous">
+        @if (Model.HasNextPage)
+        {        
+            @Html.RouteLink("Inversiones más antiguas",
+                "Inversiones",
+                new { page = (Model.PageIndex + 1) })
+        }
+    </div>
+	<div class="right next">
+        @if (Model.HasPreviousPage)
+        {        
+            @Html.RouteLink("Inversiones más nuevas",
+                "Inversiones",
+                new { page = (Model.PageIndex - 1) })
+        }     
+    </div>
+    <div class="clearer">&nbsp;</div>					
+</div>

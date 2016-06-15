@@ -1,0 +1,33 @@
+﻿@model SitioWeb.Models.Noticia
+
+@{
+    ViewBag.Title = "Remover Noticia";
+}
+
+<h2>Remover Noticia</h2>
+
+<h3>¿Está seguro que desea eliminar esto?</h3>
+<fieldset>
+    <legend>Noticia</legend>
+
+    <div class="display-label">Titulo</div>
+    <div class="display-field">@Model.Titulo</div>
+
+    <div class="display-label">Fecha</div>
+    <div class="display-field">@Model.Fecha.ToLongDateString()</div>    
+
+    <div class="display-label">Imagen</div>
+    <div class="display-field"><img src="../../@Model.Imagen" alt="" /></div>
+
+    <div class="display-label">Texto</div>
+    <div class="display-field">@Html.Raw(Model.Texto)</div>
+
+    <div class="display-label">CategoriaId</div>
+    <div class="display-field">@Model.CategoriaId</div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Borrar" />
+        @Html.ActionLink("Volver", "Index")
+    </p>
+}

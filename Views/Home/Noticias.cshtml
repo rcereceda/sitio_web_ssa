@@ -1,0 +1,39 @@
+﻿@model SitioWeb.Helpers.PaginatedList<SitioWeb.Models.Noticia>
+@{
+    ViewBag.Title = "Servicio de Salud Atacama";
+}
+
+<div class="post-meta archive-pagination">
+    <div class="left">
+        @if (Model.HasPreviousPage) {        
+            @Html.RouteLink("Anterior", 
+                "Archivo", 
+                new { page=(Model.PageIndex-1) })
+        }
+    </div>
+	<div class="right">
+        @if (Model.HasNextPage)
+        {        
+            @Html.RouteLink("Siguiente",
+                "Archivo",
+                new { page = (Model.PageIndex + 1) })
+        }     
+    </div>
+    <div class="clearer">&nbsp;</div>					
+</div>
+
+@foreach (var item in Model)
+{
+    <div class="post">
+        <div class="archive-post-date">
+	        <div class="archive-post-day">@item.Fecha.Day</div>
+	        <div class="archive-post-month">@item.Fecha.ToString("MMMM").Substring(0,3).ToUpper()</div>
+	    </div>
+	    <div class="archive-post-title">
+        	<h3>@Html.ActionLink(item.Titulo, "Leer", "Home", new { id = item.Id }, null)</h3>
+	        <div class="post-date">@item.Fecha.ToLongDateString()</div>
+	    </div>
+        <div class="clearer">&nbsp;</div>
+    </div>
+    <div class="archive-separator"></div>
+}

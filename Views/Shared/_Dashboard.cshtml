@@ -1,0 +1,45 @@
+﻿<div class="column left" id="column-1">    
+
+	<div class="column-content">        
+
+	</div>    
+
+</div>
+
+<div class="column left" id="column-2">
+
+	<div class="column-content">
+				
+		<div class="column-title">¿DONDE UBICARNOS?</div>
+
+		<p>Chacabuco 520 Edificio Lautaro 2do piso,<br/> Copiapó, Chile<br/>Tel: +56 52 465900<br/>e-mail: oirsatacama@redsalud.gov.cl</p>		
+
+        <div class="left lpadding"><img alt="" src="@Url.Content("~/Content/img/facebook_32.png")" /></div>
+        <div class="left lpadding"><img alt="" src="@Url.Content("~/Content/img/flickr_32.png")" /></div>
+
+	</div>
+
+</div>
+
+<div class="column left" id="column-3">
+
+	<div class="column-content">	   
+        
+        <div id="map"></div>
+        <script type="text/javascript">
+            $("#map").gMap({ controls: false,
+                scrollwheel: false,
+                markers: [{ latitude: -27.36551,
+                longitude: -70.33197,
+                html: "<div style='width:210px; padding-right:10px; font-size:small;'>Llámenos al <b>+56 52 465900</b>, o envíenos un <a href='mailto:oirsatacama@redsalud.gov.cl'><b>mail</b></a> <a style='text-decoration: none;' href='http://maps.google.es/maps?f=q&source=s_q&hl=es&geocode=&q=chacabuco+520,+copiap%C3%B3,+chile&sll=40.396764,-3.713379&sspn=12.023947,19.753418&ie=UTF8&hq=&hnear=Chacabuco+520,+Copiap%C3%B3,+Chile&z=17' style='text-decoration:none;color:#000;' target='_blank'>[ + ]</a></div>",
+                popup: true
+            }],
+                zoom: 15
+            });
+        </script>
+                		
+	</div>
+
+</div>
+
+<div class="clearer">&nbsp;</div>
